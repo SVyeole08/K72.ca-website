@@ -5,7 +5,7 @@ import Homebottom from "../Components/home/Homebottom";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="w-screen h-screen fixed">
         <Video />
       </div>
