@@ -5,16 +5,37 @@ import React, { useRef } from "react";
 
 const Agence = () => {
   const imageDivRef = useRef(null);
+
+  const imageArray = [
+    "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/Lawrence_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/SophieA_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/Claire_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/Michele_480X640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/MEL_480X640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/CAMILLE_480X640_2-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/MAXIME_480X640_2-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/MEGGIE_480X640_2-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg",
+  ];
+  const imageRef = useRef(imageArray);
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(function () {
     gsap.to(imageDivRef.current, {
       scrollTrigger: {
-        trigger: imageDivRef.current,
+        trigger: imageRef.current,
         markers: true,
-        start: "top 30%",
-        end: "bottom 30%",
-        scrub: true,
+        start: "top 31%",
+        end: "top -200%",
         pin: true,
+        onUpdate: (elem) => {
+          const imageIndex = Math.floor(elem.progress * imageArray.length);
+          imageRef.current.src = imageArray[imageIndex];
+        },
       },
     });
   });
@@ -27,77 +48,12 @@ const Agence = () => {
       >
         <div
           ref={imageDivRef}
-          className="h-[35vh] w-48 absolute top-54 overflow-hidden left-97"
+          className="h-[38vh] w-48 absolute top-48 left-97"
         >
           <img
             className="rounded-2xl h-full w-full object-cover"
+            ref={imageRef}
             src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/Lawrence_480x640-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/SophieA_480x640-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/Claire_480x640-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/Michele_480X640-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/MEL_480X640-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/CAMILLE_480X640_2-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/MAXIME_480X640_2-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/MEGGIE_480X640_2-480x640.jpg"
-            alt=""
-          />
-          <img
-            className="rounded-2xl h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg"
-            alt=""
           />
         </div>
         <div className="mt-[56vh] relative px-2">
@@ -106,8 +62,8 @@ const Agence = () => {
             Douze
           </h1>
         </div>
-        <div className="pl-[43%]">
-          <p className=" text-right text-5xl w-[55vw] h-fit">
+        <div className="pl-[40%] relative text-right text-5xl block">
+          <p className="w-[58vw] ">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notre
             curiosité nourrit notre créativité. On reste humbles et on dit non
             aux gros egos, même le vôtre. Une marque est vivante. Elle a des
@@ -118,7 +74,6 @@ const Agence = () => {
           </p>
         </div>
       </div>
-      <div className="section-2"></div>
     </>
   );
 };
