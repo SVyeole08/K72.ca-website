@@ -8,3 +8,6 @@
     font-family: font-2;
     src: url(../src/Fonts/Lausanne-500.ttf);
 }
+body{
+    overflow-x: hidden;
+}
