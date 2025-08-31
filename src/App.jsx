@@ -1,7 +1,7 @@
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
-import Projects from "./Pages/Projects";
 import Agence from "./Pages/Agence";
+import Projets from "./Pages/Projects";
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/agence" element={<Agence />}>
           Agence
         </Route>
-        <Route path="/projects" element={<Projects />}>
+        <Route path="/projets" element={<Projets />}>
           Projects
         </Route>
       </Routes>

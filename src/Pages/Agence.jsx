@@ -5,6 +5,7 @@ import React, { useRef } from "react";
 
 const Agence = () => {
   const imageDivRef = useRef(null);
+  const imageRef = useRef(null);
 
   const imageArray = [
     "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
@@ -22,18 +23,21 @@ const Agence = () => {
     "https://k72.ca/uploads/teamMembers/MEGGIE_480X640_2-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg",
   ];
-  const imageRef = useRef(imageArray);
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(function () {
     gsap.to(imageDivRef.current, {
       scrollTrigger: {
-        trigger: imageRef.current,
-        markers: true,
+        trigger: imageDivRef.current,
         start: "top 31%",
-        end: "top -200%",
+        end: "top -140%",
         pin: true,
         onUpdate: (elem) => {
-          const imageIndex = Math.floor(elem.progress * imageArray.length);
+          let imageIndex;
+          if (elem.progress < 1) {
+            imageIndex = Math.floor(elem.progress * imageArray.length);
+          } else {
+            imageIndex = imageArray.length - 1;
+          }
           imageRef.current.src = imageArray[imageIndex];
         },
       },
@@ -44,11 +48,11 @@ const Agence = () => {
     <>
       <div
         className="section-1
-    bg-white w-screen h-screen relative text-black overflow-x-hidden font-[font-2]"
+    bg-white w-screen h-[350vh] relative text-black overflow-x-hidden font-[font-2]"
       >
         <div
           ref={imageDivRef}
-          className="h-[38vh] w-48 absolute top-48 left-97"
+          className="h-[38vh] w-48 absolute top-48 left-95"
         >
           <img
             className="rounded-2xl h-full w-full object-cover"
