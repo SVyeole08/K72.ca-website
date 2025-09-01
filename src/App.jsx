@@ -3,14 +3,13 @@ import Home from "./Pages/Home";
 import Agence from "./Pages/Agence";
 import Projets from "./Pages/Projects";
 import Navbar from "./Navigation/Navbar";
+import FullScreenNav from "./Navigation/FullScreenNav";
 
 const App = () => {
   return (
-    <div className="text-white w-screen font-[gilroy] h-screen">
-      {/* <Link to="/">Home</Link>
-      <Link to="/agence">Agence</Link>
-      <Link to="/projects">Projects</Link> */}
+    <div className="text-white w-screen font-[font-1] h-screen">
       <Navbar />
+      <FullScreenNav />
       <Routes>
         <Route path="/" element={<Home />}>
           Home
