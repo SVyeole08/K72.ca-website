@@ -2,6 +2,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Agence from "./Pages/Agence";
 import Projets from "./Pages/Projects";
+import Navbar from "./Navigation/Navbar";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       {/* <Link to="/">Home</Link>
       <Link to="/agence">Agence</Link>
       <Link to="/projects">Projects</Link> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}>
           Home

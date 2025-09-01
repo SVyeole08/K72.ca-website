@@ -41,7 +41,7 @@ const Agence = () => {
           if (elem.progress < 1) {
             imageIndex = Math.floor(elem.progress * imageArray.length);
           } else {
-            imageIndex = imageArray.length - 1;
+            imageIndex = (imageArray.length - 1);
           }
           imageRef.current.src = imageArray[imageIndex];
         },
