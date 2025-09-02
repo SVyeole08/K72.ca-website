@@ -1,8 +1,29 @@
-import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { Timeline } from "gsap/gsap-core";
+import React, { useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const FullScreenNav = () => {
+
+  const navigator=useNavigate();
+
+  const cross = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    tl.from(cross.current, {
+      delay: 1.5,
+      duration: 0.7,
+      x: "150%",
+    });
+    tl.to(cross.current, {
+      x: "0%",
+    });
+  });
+
   return (
-    <div className="h-screen w-full absolute bg-black">
+    <div className="h-screen w-full absolute bg-black overflow-hidden">
       <div className="w-full h-full justify-between items-start flex absolute p-1">
         <div className="w-28 -my-1 -ml-1 p-2">
           <svg
@@ -17,9 +38,13 @@ const FullScreenNav = () => {
             ></path>
           </svg>
         </div>
-        <div className="w-23 h-23 relative mr-1 ">
-          <div className="absolute bg-white w-[2px] h-32 -rotate-45 origin-top"></div>
-          <div className="absolute bg-white w-[2px] h-32 right-0 rotate-45 origin-top"></div>
+        <div
+          onClick={()=>navigator(-1)}
+          className="cross w-23 h-23 relative mr-1 mt-1"
+          ref={cross}
+        >
+          <div className="absolute bg-white w-[2px] h-32 hover:bg-[#D3FD50] -rotate-45 origin-top"></div>
+          <div className="absolute bg-white w-[2px] h-32 hover:bg-[#D3FD50] right-0 rotate-45 origin-top"></div>
         </div>
       </div>
       <div className="mt-[10.6vw] py-2">
