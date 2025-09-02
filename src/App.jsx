@@ -8,9 +8,9 @@ import FullScreenNav from "./Navigation/FullScreenNav";
 const App = () => {
   return (
     <div className="text-white w-screen font-[font-1] h-screen">
-      <Navbar />
+      {/* <Navbar /> */}
       <FullScreenNav />
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Home />}>
           Home
         </Route>
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/projets" element={<Projets />}>
           Projects
         </Route>
-      </Routes>
+      </Routes> */}
     </div>
   );
 };
