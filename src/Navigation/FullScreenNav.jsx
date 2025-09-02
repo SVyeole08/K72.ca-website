@@ -1,12 +1,10 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Timeline } from "gsap/gsap-core";
 import React, { useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const FullScreenNav = () => {
-
-  const navigator=useNavigate();
+  const navigator = useNavigate();
 
   const cross = useRef(null);
 
@@ -39,8 +37,8 @@ const FullScreenNav = () => {
           </svg>
         </div>
         <div
-          onClick={()=>navigator(-1)}
-          className="cross w-23 h-23 relative mr-1 mt-1"
+          onClick={() => navigator(-1)}
+          className="cross w-23 h-23 relative mr-1 mt-1 cursor-pointer"
           ref={cross}
         >
           <div className="absolute bg-white w-[2px] h-32 hover:bg-[#D3FD50] -rotate-45 origin-top"></div>

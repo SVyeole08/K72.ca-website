@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
+import FullScreenNav from "./FullScreenNav";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigator = useNavigate();
   const NavGreenRef = useRef(null);
 
   return (
@@ -19,13 +22,14 @@ const Navbar = () => {
         </svg>
       </div>
       <div
+        onClick={() => navigator("/menu")}
         onMouseEnter={() => {
           NavGreenRef.current.style.height = "100%";
         }}
-        onMouseLeave={()=>{
-        NavGreenRef.current.style.height = "0%"
-      }}
-        className="bg-black h-11 relative w-[15.6vw]"
+        onMouseLeave={() => {
+          NavGreenRef.current.style.height = "0%";
+        }}
+        className="nav bg-black h-11 relative w-[15.6vw]"
       >
         <div
           ref={NavGreenRef}
