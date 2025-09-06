@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useRef } from "react";
+import { NavbarContext } from "../Context/NavContext";
 
 const Navbar = () => {
-  const navigator = useNavigate();
+  const navLine = useRef(null);
+  const navLine2 = useRef(null);
   const NavGreenRef = useRef(null);
-
+  const [navOpen, setNavOpen] = useContext(NavbarContext);
   return (
     <div className="flex fixed top-0 w-full items-start justify-between z-4">
       <div className="w-26 p-2">
@@ -21,18 +22,32 @@ const Navbar = () => {
         </svg>
       </div>
       <div
-        onClick={() => navigator("/menu")}
+        onClick={() => setNavOpen(true)}
         onMouseEnter={() => {
           NavGreenRef.current.style.height = "100%";
+          navLine.current.style.backgroundColor = "black";
+          navLine2.current.style.backgroundColor = "black";
         }}
         onMouseLeave={() => {
           NavGreenRef.current.style.height = "0%";
+          navLine.current.style.backgroundColor = "white";
+          navLine2.current.style.backgroundColor = "white";
         }}
         className="nav bg-black h-11 relative w-[15.6vw]"
       >
+        <div className="p-2 gap-5">
+          <div
+            ref={navLine}
+            className="bg-white w-10 h-[1px] top-4.5 right-6 absolute z-30"
+          ></div>
+          <div
+            ref={navLine2}
+            className="bg-white w-5 h-[1px] top-5.5 right-6 absolute z-30"
+          ></div>
+        </div>
         <div
           ref={NavGreenRef}
-          className="bg-[#D3FD50] absolute top-0 w-full h-0 transition-all duration-100"
+          className="bg-[#D3FD50] absolute top-0 w-full h-0 transition-all duration-100 z-10"
         ></div>
         <div className="relative"></div>
       </div>

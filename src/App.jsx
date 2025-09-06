@@ -7,10 +7,10 @@ import Navbar from "./Navigation/Navbar";
 const App = () => {
   return (
     <div>
-      <div className="text-white w-screen font-[font-1] h-screen">
-        {/* <Navbar /> */}
+      <div className="select-none text-white w-screen font-[font-1] h-screen">
+        <Navbar />
         <FullScreenNav />
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<Home />}>
             Home
           </Route>
@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/projets" element={<Projets />}>
             Projects
           </Route>
-        </Routes> */}
+        </Routes>
       </div>
     </div>
   );

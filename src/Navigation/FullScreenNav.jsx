@@ -1,28 +1,52 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
+import { NavbarContext } from "../Context/NavContext";
 
 const FullScreenNav = () => {
   const fullNavLinks = useRef(null);
+  const NavScreenLinks = useRef(null);
+  const [navOpen, setNavOpen] = useContext(NavbarContext);
   const cross = useRef(null);
-
-  useGSAP(function () {
+  function gsapAnimation() {
     const tl = gsap.timeline();
     tl.from(".stairing", {
-      delay: 1,
       height: 0,
-      stagger: { amount: -0.23 },
+      stagger: { amount: -0.3 },
     });
     tl.from(fullNavLinks.current, {
       opacity: 0,
     });
-  });
+    tl.from(".link", {
+      opacity: 0,
+      rotateX: 90,
+      stagger: { amount: 0.23 },
+    });
+    tl.to(".navLink", {
+      opacity: 1,
+    });
+  }
+  useGSAP(
+    function () {
+      if (navOpen) {
+        gsap.to(".fullScreenNav", {
+          display: "block",
+        });
+        gsapAnimation();
+      } else {
+        gsap.to(".fullScreenNav", {
+          display: "none",
+        });
+      }
+    },
+    [navOpen]
+  );
 
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.from(cross.current, {
-      delay: 1.5,
-      duration: 0.7,
+      delay: 2,
+      duration: 3.1,
       x: "150%",
     });
     tl.to(cross.current, {
@@ -31,7 +55,10 @@ const FullScreenNav = () => {
   });
 
   return (
-    <div className="h-screen w-full absolute bg-black overflow-hidden">
+    <div
+      ref={NavScreenLinks}
+      className="fullScreenNav hidden h-screen w-full absolute z-50 bg-black overflow-hidden"
+    >
       <div className="h-screen w-full fixed flex">
         <div className="stairing h-full w-1/5 bg-black"></div>
         <div className="stairing h-full w-1/5 bg-black"></div>
@@ -39,9 +66,9 @@ const FullScreenNav = () => {
         <div className="stairing h-full w-1/5 bg-black"></div>
         <div className="stairing h-full w-1/5 bg-black"></div>
       </div>
-      <div ref={fullNavLinks} className="relative">
+      <div ref={fullNavLinks} className="navLink relative">
         <div className="w-full h-full justify-between items-start flex p-1">
-          <div className="w-28 -my-1 -ml-1 p-2">
+          <div className="w-27 -my-1 -ml-1 p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-full"
@@ -55,7 +82,9 @@ const FullScreenNav = () => {
             </svg>
           </div>
           <div
-            onClick={() => navigator(-1)}
+            onClick={() => {
+              setNavOpen(false);
+            }}
             className="cross w-23 h-23 relative mr-1 mt-1 cursor-pointer"
             ref={cross}
           >
@@ -63,8 +92,8 @@ const FullScreenNav = () => {
             <div className="absolute bg-white w-[2px] h-32 hover:bg-[#D3FD50] right-0 rotate-45 origin-top"></div>
           </div>
         </div>
-        <div className="mt-15 py-2">
-          <div className="link relative border-t-1 border-gray-500">
+        <div className="py-12">
+          <div className="link origin-top relative border-t-1 border-gray-500">
             <h1 className="font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
               Projets
             </h1>
@@ -93,7 +122,7 @@ const FullScreenNav = () => {
                   className="h-20 w-60 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
                 />
-                <h2 className="whitespace-nowrap   font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
+                <h2 className="whitespace-nowrap font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour tout voir &nbsp;
                 </h2>
                 <img
@@ -103,7 +132,7 @@ const FullScreenNav = () => {
               </div>
             </div>
           </div>
-          <div className="link relative border-t-1 border-gray-500">
+          <div className="link origin-top relative border-t-1 border-gray-500">
             <h1 className="font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
               Agence
             </h1>
@@ -142,7 +171,7 @@ const FullScreenNav = () => {
               </div>
             </div>
           </div>
-          <div className="link relative border-t-1 border-gray-500">
+          <div className="link origin-top relative border-t-1 border-gray-500">
             <h1 className="font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
               Contact
             </h1>
@@ -181,7 +210,7 @@ const FullScreenNav = () => {
               </div>
             </div>
           </div>
-          <div className="link relative border-y-1 border-gray-500">
+          <div className="link origin-top relative border-y-1 border-gray-500">
             <h1 className="font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
               Blogue
             </h1>
