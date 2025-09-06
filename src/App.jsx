@@ -6,10 +6,11 @@ import Agence from "./Pages/Agence";
 import Navbar from "./Navigation/Navbar";
 const App = () => {
   return (
-    <div className="overflow-hidden">
+    <div>
       <div className="text-white w-screen font-[font-1] h-screen">
-        <Navbar />
-        <Routes>
+        {/* <Navbar /> */}
+        <FullScreenNav />
+        {/* <Routes>
           <Route path="/" element={<Home />}>
             Home
           </Route>
@@ -19,8 +20,7 @@ const App = () => {
           <Route path="/projets" element={<Projets />}>
             Projects
           </Route>
-          <Route path="/menu" element={<FullScreenNav />}></Route>
-        </Routes>
+        </Routes> */}
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import FullScreenNav from "./FullScreenNav";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
