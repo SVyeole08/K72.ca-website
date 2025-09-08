@@ -5,14 +5,21 @@ import { NavbarContext } from "../Context/NavContext";
 
 const FullScreenNav = () => {
   const fullNavLinks = useRef(null);
-  const NavScreenLinks = useRef(null);
+  const FullScreenNav = useRef(null);
   const [navOpen, setNavOpen] = useContext(NavbarContext);
   const cross = useRef(null);
   function gsapAnimation() {
     const tl = gsap.timeline();
-    tl.from(".stairing", {
+    tl.to(FullScreenNav.current, {
+      display: "block",
+    });
+    tl.from(".stairs", {
+      duration: 0.5,
       height: 0,
       stagger: { amount: -0.3 },
+    });
+    tl.to(".stairs", {
+      height: "100%",
     });
     tl.from(fullNavLinks.current, {
       opacity: 0,
@@ -20,23 +27,23 @@ const FullScreenNav = () => {
     tl.from(".link", {
       opacity: 0,
       rotateX: 90,
-      stagger: { amount: 0.23 },
+      stagger: { amount: 0.3 },
     });
     tl.to(".navLink", {
       opacity: 1,
     });
   }
+  function gsapAnimationReverse() {
+    gsap.to(FullScreenNav.current, {
+      display: "none",
+    });
+  }
   useGSAP(
     function () {
       if (navOpen) {
-        gsap.to(".fullScreenNav", {
-          display: "block",
-        });
         gsapAnimation();
       } else {
-        gsap.to(".fullScreenNav", {
-          display: "none",
-        });
+        gsapAnimationReverse();
       }
     },
     [navOpen]
@@ -45,7 +52,7 @@ const FullScreenNav = () => {
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.from(cross.current, {
-      delay: 2,
+      delay: 3,
       duration: 3.1,
       x: "150%",
     });
@@ -56,18 +63,18 @@ const FullScreenNav = () => {
 
   return (
     <div
-      ref={NavScreenLinks}
-      className="fullScreenNav hidden h-screen w-full absolute z-50 bg-black overflow-hidden"
+      ref={FullScreenNav}
+      className="fullScreenNav h-screen w-full absolute z-50 overflow-hidden"
     >
       <div className="h-screen w-full fixed flex">
-        <div className="stairing h-full w-1/5 bg-black"></div>
-        <div className="stairing h-full w-1/5 bg-black"></div>
-        <div className="stairing h-full w-1/5 bg-black"></div>
-        <div className="stairing h-full w-1/5 bg-black"></div>
-        <div className="stairing h-full w-1/5 bg-black"></div>
+        <div className="stairs h-full w-1/5 bg-black"></div>
+        <div className="stairs h-full w-1/5 bg-black"></div>
+        <div className="stairs h-full w-1/5 bg-black"></div>
+        <div className="stairs h-full w-1/5 bg-black"></div>
+        <div className="stairs h-full w-1/5 bg-black"></div>
       </div>
-      <div ref={fullNavLinks} className="navLink relative">
-        <div className="w-full h-full justify-between items-start flex p-1">
+      <div ref={fullNavLinks} className=" relative">
+        <div className="navLink w-full h-full justify-between items-start flex p-1">
           <div className="w-27 -my-1 -ml-1 p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

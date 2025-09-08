@@ -7,7 +7,7 @@ import Navbar from "./Navigation/Navbar";
 const App = () => {
   return (
     <div>
-      <div className="select-none text-white w-screen font-[font-1] h-screen">
+      <div className="bg-white select-none text-white w-screen font-[font-1] h-screen">
         <Navbar />
         <FullScreenNav />
         <Routes>
