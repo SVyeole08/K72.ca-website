@@ -1,7 +1,7 @@
 import { Link, Route, Routes } from "react-router-dom";
 import FullScreenNav from "./Navigation/FullScreenNav";
 import Home from "./Pages/Home";
-import Projets from "./Pages/Projects";
+import Projets from "./Pages/Projets";
 import Agence from "./Pages/Agence";
 import Navbar from "./Navigation/Navbar";
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
             Agence
           </Route>
           <Route path="/projets" element={<Projets />}>
-            Projects
+            Projets
           </Route>
         </Routes>
       </div>
