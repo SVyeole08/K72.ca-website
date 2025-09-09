@@ -2,8 +2,10 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useContext, useRef } from "react";
 import { NavbarContext } from "../Context/NavContext";
+import { useNavigate } from "react-router-dom";
 
 const FullScreenNav = () => {
+  const navigate = useNavigate();
   const fullNavLinks = useRef(null);
   const FullScreenNav = useRef(null);
   const [navOpen, setNavOpen] = useContext(NavbarContext);
@@ -64,7 +66,7 @@ const FullScreenNav = () => {
   return (
     <div
       ref={FullScreenNav}
-      className="fullScreenNav h-screen w-full absolute z-50 overflow-hidden"
+      className="fullScreenNav hidden h-screen w-full absolute z-50 overflow-hidden"
     >
       <div className="h-screen w-full fixed flex">
         <div className="stairs h-full w-1/5 bg-black"></div>
@@ -100,7 +102,13 @@ const FullScreenNav = () => {
           </div>
         </div>
         <div className="py-12">
-          <div className="link origin-top relative border-t-1 border-gray-500">
+          <div
+            onClick={() => {
+              navigate("/projets");
+              setNavOpen(false);
+            }}
+            className="link origin-top relative border-t-1 border-gray-500"
+          >
             <h1 className="font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
               Projets
             </h1>
@@ -139,7 +147,13 @@ const FullScreenNav = () => {
               </div>
             </div>
           </div>
-          <div className="link origin-top relative border-t-1 border-gray-500">
+          <div
+            onClick={() => {
+              navigate("/agence");
+              setNavOpen(false);
+            }}
+            className="link origin-top relative border-t-1 border-gray-500"
+          >
             <h1 className="font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
               Agence
             </h1>
@@ -178,7 +192,13 @@ const FullScreenNav = () => {
               </div>
             </div>
           </div>
-          <div className="link origin-top relative border-t-1 border-gray-500">
+          <div
+            onClick={() => {
+              navigate("/contact");
+              setNavOpen(false);
+            }}
+            className="link origin-top relative border-t-1 border-gray-500"
+          >
             <h1 className="font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
               Contact
             </h1>
@@ -217,7 +237,13 @@ const FullScreenNav = () => {
               </div>
             </div>
           </div>
-          <div className="link origin-top relative border-y-1 border-gray-500">
+          <div
+            onClick={() => {
+              navigate("/blogue");
+              setNavOpen(false);
+            }}
+            className="link origin-top relative border-y-1 border-gray-500"
+          >
             <h1 className="font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
               Blogue
             </h1>

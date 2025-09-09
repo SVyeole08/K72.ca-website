@@ -74,14 +74,11 @@ const Projets = () => {
         <h2 className="uppercase font-[font-2] text-[13.1vw] text-black ">
           Projets
         </h2>
-        <div className="lol">
+        <div className="-mt-16 lol">
           {projets.map((elem, idx) => {
             return (
-              <div key={idx} className="hero w-full h-[80vh] flex gap-3 mb-3">
-                <ProjetCard
-                  image1={elem.image1}
-                  image2={elem.image2}
-                />
+              <div key={idx} className="hero w-full h-[70vh] flex gap-3 mb-3">
+                <ProjetCard image1={elem.image1} image2={elem.image2} />
               </div>
             );
           })}
