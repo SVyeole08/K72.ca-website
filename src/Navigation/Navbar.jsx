@@ -8,7 +8,7 @@ const Navbar = () => {
   const [navOpen, setNavOpen] = useContext(NavbarContext);
   return (
     <div className="flex fixed top-0 w-full items-start justify-between z-4">
-      <div className="w-26 p-2">
+      <div className="w-28 p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-full"

@@ -77,7 +77,7 @@ const FullScreenNav = () => {
       </div>
       <div ref={fullNavLinks} className=" relative">
         <div className="navLink w-full h-full justify-between items-start flex p-1">
-          <div className="w-27 -my-1 -ml-1 p-2">
+          <div className="w-28 -my-1 -ml-1 p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-full"
