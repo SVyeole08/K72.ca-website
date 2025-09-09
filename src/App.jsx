@@ -4,6 +4,8 @@ import Home from "./Pages/Home";
 import Projets from "./Pages/Projets";
 import Agence from "./Pages/Agence";
 import Navbar from "./Navigation/Navbar";
+import Blogue from "./Pages/Blogue";
+import Contact from "./Pages/Contact";
 const App = () => {
   return (
     <div>
@@ -20,6 +22,11 @@ const App = () => {
           <Route path="/projets" element={<Projets />}>
             Projets
           </Route>
+          <Route path="/contact" element={<Contact/>}>
+            Contact</Route>
+          <Route path="/blogue" element={<Blogue/>}>
+            Blogue
+          </Route> 
         </Routes>
       </div>
     </div>
