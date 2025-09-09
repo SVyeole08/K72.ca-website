@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import ContactTop from "../Components/contact/ContactTop";
+import ContactBottom from "../Components/contact/ContactBottom";
 const Contact = () => {
   const ContactDiv = useRef(null);
   return (
@@ -47,6 +48,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ContactBottom />
     </>
   );
 };
