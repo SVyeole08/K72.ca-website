@@ -6,7 +6,7 @@ const ContactTop = () => {
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.from(".names", {
-      delay: 1.2,
+      delay: 1.3,
       y: -50,
       duration:0.4,
       opacity:0,
