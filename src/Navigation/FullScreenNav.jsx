@@ -209,14 +209,14 @@ const FullScreenNav = () => {
                 </h2>
                 <img
                   className="h-19 w-15 rounded-full shrink-0 object-cover"
-                  src="src\Media\pixcar.png"
+                  src="src\assets\Media\pixcar.png"
                 />
                 <h2 className="whitespace-nowrap   font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour envoyer un fax &nbsp;
                 </h2>
                 <img
                   className="h-19 w-15 rounded-full shrink-0 object-cover"
-                  src="src\Media\pixcar.png"
+                  src="src\assets\Media\pixcar.png"
                 />
               </div>
               <div className="moveX flex items-center">
@@ -225,14 +225,14 @@ const FullScreenNav = () => {
                 </h2>
                 <img
                   className="h-19 w-15 rounded-full shrink-0 object-cover"
-                  src="src\Media\pixcar.png"
+                  src="src\assets\Media\pixcar.png"
                 />
                 <h2 className="whitespace-nowrap   font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour envoyer un fax &nbsp;
                 </h2>
                 <img
                   className="h-19 w-15 rounded-full shrink-0 object-cover"
-                  src="src\Media\pixcar.png"
+                  src="src\assets\Media\pixcar.png"
                 />
               </div>
             </div>

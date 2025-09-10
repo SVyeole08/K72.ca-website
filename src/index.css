@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: font-1;
-  src: url(../src/Fonts/Lausanne-300.ttf);
+  src: url(../src/assets/Fonts/Lausanne-300.ttf);
 }
 @font-face {
   font-family: font-2;
-  src: url(../src/Fonts/Lausanne-500.ttf);
+  src: url(../src/assets/Fonts/Lausanne-500.ttf);
 }
 body {
   overflow-x: hidden;

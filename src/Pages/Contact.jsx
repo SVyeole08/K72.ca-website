@@ -11,35 +11,35 @@ const Contact = () => {
               <h1 className="text-[18vh] pt-2 uppercase font-[font-2]">
                 &nbsp;bonjour@k72.ca
               </h1>
-              <img className="h-25" src="src\Media\pixcar.png" alt="" />
+              <img className="h-25" src="src\assets\Media\pixcar.png" alt="" />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <div className="items-center flex">
               <h1 className="text-[18vh] pt-2 uppercase font-[font-2]">
                 &nbsp;bonjour@k72.ca
               </h1>
-              <img className="h-25" src="src\Media\pixcar.png" alt="" />
+              <img className="h-25" src="src\assets\Media\pixcar.png" alt="" />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <div className="items-center flex">
               <h1 className="text-[18vh] pt-2 uppercase font-[font-2]">
                 &nbsp;bonjour@k72.ca
               </h1>
-              <img className="h-25" src="src\Media\pixcar.png" alt="" />
+              <img className="h-25" src="src\assets\Media\pixcar.png" alt="" />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <div className="items-center flex">
               <h1 className="text-[18vh] pt-2 uppercase font-[font-2]">
                 &nbsp;bonjour@k72.ca
               </h1>
-              <img className="h-25" src="src\Media\pixcar.png" alt="" />
+              <img className="h-25" src="src\assets\Media\pixcar.png" alt="" />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <div className="items-center flex">
               <h1 className="text-[18vh] pt-2 uppercase font-[font-2]">
                 &nbsp;bonjour@k72.ca
               </h1>
-              <img className="h-25" src="src\Media\pixcar.png" alt="" />
+              <img className="h-25" src="src\assets\Media\pixcar.png" alt="" />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
           </div>
