@@ -29,7 +29,7 @@ const Blogue = () => {
             </div>
           </div>
         </div>
-        <div className="w-[95vw] origin-center h-[0.5px] -mt-66 bg-black ml-[1.5vw]"></div>
+        <div className="w-[97vw] h-[0.5px] -mt-43 bg-black ml-[1.5vw]"></div>
       </div>
       <Blgcont />
       <div className="w-screen transition-all-ease  h-[62vh] flex font-[font-2] justify-between bg-black p-2 mt-60 text-[5vw] text-center">

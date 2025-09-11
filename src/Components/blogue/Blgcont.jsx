@@ -3,7 +3,7 @@ import React from "react";
 const Blgcont = () => {
   return (
     <div>
-      <div className="w-screen h-[58vh] flex p-3 gap-3 ">
+      <div className="w-screen h-[58vh] flex p-3 gap-3">
         <div className="w-1/2 h-full overflow-hidden rounded-[50px]">
           <img
             src="https://k72.ca/uploads/blog/blogImg/ier.com-16107673482102220.gif"
