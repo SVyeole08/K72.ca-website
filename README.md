@@ -7,26 +7,6 @@ It replicates the **modern design, animations, and smooth interactions** of the 
 
 ---
 
-## 📸 Demo Preview  
-
-### 🏠 Home Page
-<video autoplay muted loop src="Readme of K72\20250910-1651-27.5439102.mp4" title="home"></video>
-
-### ⚒️ Projects Page
-<video autoplay muted loop src="Readme of K72\20250910-1647-14.1266165.mp4" title="projets"></video>
-
-### 🏢 Agence Page
-<video autoplay muted loop src="Readme of K72\20250910-1642-34.1905830.mp4" title="agence"></video>
-
-### 📰 Blog Page
-<video autoplay muted loop src="Readme of K72\Recording 2025-09-11 205316.mp4" title="blogue"></video>
-
-
-### 📧 Contact Page
-<video autoplay muted loop src="Readme of K72\20250910-1654-59.3900190.mp4" title="contact"></video>
-
----
-
 ## 🛠️ Tech Stacks  
 
 - **React.js** → Component-based UI  
