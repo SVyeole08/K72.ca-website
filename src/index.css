@@ -17,6 +17,12 @@ body {
   animation-duration: 10s;
   animation-timing-function: linear;
 }
+.moveY {
+  animation-name: movingYAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
 .moveLink {
   animation-name: movingDivAnimation;
   opacity: 0;
@@ -31,6 +37,14 @@ body {
   }
   to {
     transform: translateX(-80%);
+  }
+}
+@keyframes movingYAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 @keyframes movingDivAnimation {

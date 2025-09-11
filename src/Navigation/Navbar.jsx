@@ -1,7 +1,9 @@
 import React, { useContext, useRef } from "react";
 import { NavbarContext } from "../Context/NavContext";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const navLine = useRef(null);
   const navLine2 = useRef(null);
   const NavGreenRef = useRef(null);
@@ -10,6 +12,7 @@ const Navbar = () => {
     <div className="flex fixed top-0 w-full items-start justify-between z-4">
       <div className="w-28 p-2">
         <svg
+          onClick={() => navigate("/")}
           xmlns="http://www.w3.org/2000/svg"
           className="w-full"
           fill="white"

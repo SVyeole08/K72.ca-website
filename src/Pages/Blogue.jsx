@@ -12,7 +12,7 @@ const Blogue = () => {
             <div className="bg-black left-33 top-2 absolute rounded-full w-[13px] h-[13px]"></div>
             <h1 className="text-xl font-[font-2]">Blogue</h1>
           </div>
-          <div className=" absolute font-[font-2] right-0 top-104 text-xl flex pr-2">
+          <div className=" absolute font-[font-2] right-0 top-126 text-xl flex pr-2">
             <div>
               <h1>Catégories :&nbsp;</h1>
             </div>

@@ -113,7 +113,7 @@ const FullScreenNav = () => {
               Projets
             </h1>
             <div className="moveLink absolute  flex bg-[#D3FD50] min-w-[250%] top-0 text-black">
-              <div className="moveX flex items-center">
+              <div className="moveY flex items-center">
                 <h2 className="whitespace-nowrap font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour tout voir &nbsp;
                 </h2>
@@ -129,7 +129,7 @@ const FullScreenNav = () => {
                   src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
                 />
               </div>
-              <div className="moveX flex items-center">
+              <div className="moveY flex items-center">
                 <h2 className="whitespace-nowrap font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour tout voir &nbsp;
                 </h2>
@@ -158,7 +158,7 @@ const FullScreenNav = () => {
               Agence
             </h1>
             <div className="moveLink absolute  flex bg-[#D3FD50] min-w-[400%] top-0 text-black">
-              <div className="moveX flex items-center">
+              <div className="moveY flex items-center">
                 <h2 className="whitespace-nowrap font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour tout savoir &nbsp;
                 </h2>
@@ -174,7 +174,7 @@ const FullScreenNav = () => {
                   src="https://k72.ca/uploads/teamMembers/Michele_480X640-480x640.jpg"
                 />
               </div>
-              <div className="moveX flex items-center">
+              <div className="moveY flex items-center">
                 <h2 className="whitespace-nowrap font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour tout savoir &nbsp;
                 </h2>
@@ -203,37 +203,57 @@ const FullScreenNav = () => {
               Contact
             </h1>
             <div className="moveLink absolute  flex bg-[#D3FD50] min-w-[400%] top-0 text-black">
-              <div className="moveX flex items-center">
+              <div className="moveY flex items-center">
                 <h2 className="whitespace-nowrap font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour envoyer un fax &nbsp;
                 </h2>
-                <img
-                  className="h-19 w-15 rounded-full shrink-0 object-cover"
-                  src="src\assets\Media\pixcar.png"
-                />
+                <svg
+                  className="mt-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="6.5vw"
+                  fill="black"
+                >
+                  <path d="M256 448L64 192V96l64-96 128 160L384 0l64 96v96L256 448z" />
+                </svg>
                 <h2 className="whitespace-nowrap   font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour envoyer un fax &nbsp;
                 </h2>
-                <img
-                  className="h-19 w-15 rounded-full shrink-0 object-cover"
-                  src="src\assets\Media\pixcar.png"
-                />
+                <svg
+                  className="mt-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="6.5vw"
+                  fill="black"
+                >
+                  <path d="M256 448L64 192V96l64-96 128 160L384 0l64 96v96L256 448z" />
+                </svg>
               </div>
-              <div className="moveX flex items-center">
+              <div className="moveY flex items-center">
                 <h2 className="whitespace-nowrap font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour envoyer un fax &nbsp;
                 </h2>
-                <img
-                  className="h-19 w-15 rounded-full shrink-0 object-cover"
-                  src="src\assets\Media\pixcar.png"
-                />
+                <svg
+                  className="mt-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="6.5vw"
+                  fill="black"
+                >
+                  <path d="M256 448L64 192V96l64-96 128 160L384 0l64 96v96L256 448z" />
+                </svg>
                 <h2 className="whitespace-nowrap   font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; Pour envoyer un fax &nbsp;
                 </h2>
-                <img
-                  className="h-19 w-15 rounded-full shrink-0 object-cover"
-                  src="src\assets\Media\pixcar.png"
-                />
+                <svg
+                  className="mt-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="6.5vw"
+                  fill="black"
+                >
+                  <path d="M256 448L64 192V96l64-96 128 160L384 0l64 96v96L256 448z" />
+                </svg>
               </div>
             </div>
           </div>
@@ -248,7 +268,7 @@ const FullScreenNav = () => {
               Blogue
             </h1>
             <div className="moveLink absolute  flex bg-[#D3FD50] min-w-[400%] top-0 text-black">
-              <div className="moveX flex items-center">
+              <div className="moveY flex items-center">
                 <h2 className="whitespace-nowrap font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; lier les articles &nbsp;
                 </h2>
@@ -264,7 +284,7 @@ const FullScreenNav = () => {
                   src="https://k72.ca/uploads/blog/blogImg/50ff59cc0550df5b36543807a58db98c52e01a22274a317eafbfa5266941579b-640x290.png"
                 />
               </div>
-              <div className="moveX flex items-center">
+              <div className="moveY flex items-center">
                 <h2 className="whitespace-nowrap font-[font-2] text-[8vw] text-center pb-[1px] leading-[0.7] pt-5 uppercase ">
                   &nbsp; lier les articles &nbsp;
                 </h2>
