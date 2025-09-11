@@ -41,7 +41,7 @@ const Agence = () => {
           if (elem.progress < 1) {
             imageIndex = Math.floor(elem.progress * imageArray.length);
           } else {
-            imageIndex = (imageArray.length - 1);
+            imageIndex = imageArray.length - 1;
           }
           imageRef.current.src = imageArray[imageIndex];
         },
@@ -57,7 +57,7 @@ const Agence = () => {
       >
         <div
           ref={imageDivRef}
-          className="h-[196.364px] w-[163.987px] absolute top-48 left-50"
+          className="h-[196.364px] w-[163.987px] absolute top-48 left-95"
         >
           <img
             className="rounded-2xl h-full w-full object-cover"
