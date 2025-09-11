@@ -3,8 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
-import Stairs from "./Components/Common/stairs.jsx";
-import Navbar from "./Navigation/Navbar.jsx";
+import Stairs from "./Components/Common/Stairs.jsx";
 import NavContext from "./Context/NavContext.jsx";
 
 createRoot(document.getElementById("root")).render(
