@@ -7,14 +7,28 @@ import Agence from "./Pages/Agence";
 import Navbar from "./Navigation/Navbar";
 import Blogue from "./Pages/Blogue";
 import Contact from "./Pages/Contact";
+import { useEffect } from "react";
+import Lenis from "lenis";
 const App = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      smooth: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   const lenis = useLenis((lenis) => {
     // called every scroll
     console.log(lenis);
   });
   return (
     <div>
-      <ReactLenis root/>
+      <ReactLenis root />
       <div className="bg-white selection:bg-[#D3FD50] selection:text-black text-white w-screen font-[font-1] h-screen">
         <Navbar />
         <FullScreenNav />
