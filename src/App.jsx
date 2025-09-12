@@ -1,4 +1,5 @@
 import { Link, Route, Routes } from "react-router-dom";
+import { ReactLenis, useLenis } from "lenis/react";
 import FullScreenNav from "./Navigation/FullScreenNav";
 import Home from "./Pages/Home";
 import Projets from "./Pages/Projets";
@@ -7,8 +8,13 @@ import Navbar from "./Navigation/Navbar";
 import Blogue from "./Pages/Blogue";
 import Contact from "./Pages/Contact";
 const App = () => {
+  const lenis = useLenis((lenis) => {
+    // called every scroll
+    console.log(lenis);
+  });
   return (
     <div>
+      <ReactLenis root/>
       <div className="bg-white selection:bg-[#D3FD50] selection:text-black text-white w-screen font-[font-1] h-screen">
         <Navbar />
         <FullScreenNav />
@@ -22,7 +28,7 @@ const App = () => {
           <Route path="/projets" element={<Projets />}>
             Projets
           </Route>
-           <Route path="/contact" element={<Contact />}>
+          <Route path="/contact" element={<Contact />}>
             Contact
           </Route>
           <Route path="/blogue" element={<Blogue />}>
