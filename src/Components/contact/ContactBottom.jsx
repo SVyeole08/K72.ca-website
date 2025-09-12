@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactBottom = () => {
   return (
-    <div className="bg-black pt-20">
+    <div className="pt-10 bg-black">
       <div className="uppercase text-center mb-5 text-[1.1vw] font-[font-2]">
         <p>Suivez-nous</p>
       </div>

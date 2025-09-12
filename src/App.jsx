@@ -9,7 +9,7 @@ import Contact from "./Pages/Contact";
 const App = () => {
   return (
     <div>
-      <div className="bg-white select-none text-white w-screen font-[font-1] h-screen">
+      <div className="bg-white selection:bg-[#D3FD50] selection:text-black text-white w-screen font-[font-1] h-screen">
         <Navbar />
         <FullScreenNav />
         <Routes>
@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/projets" element={<Projets />}>
             Projets
           </Route>
-          <Route path="/contact" element={<Contact />}>
+           <Route path="/contact" element={<Contact />}>
             Contact
           </Route>
           <Route path="/blogue" element={<Blogue />}>

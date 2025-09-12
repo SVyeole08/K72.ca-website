@@ -19,7 +19,7 @@ const ContactTop = () => {
     });
   });
   return (
-    <div className="w-screen relative bg-black flex justify-center h-screen">
+    <div className="w-screen relative pb-10 bg-black flex justify-center h-fit">
       <div className="w-full py-3 text-center">
         <div className="font-[font-1] text-[10vw] origin-top overflow-hidden leading-28 uppercase">
           <h1 className="names">Pour</h1>
