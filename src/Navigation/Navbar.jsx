@@ -14,7 +14,7 @@ const Navbar = () => {
         <svg
           onClick={() => navigate("/")}
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full"
+          className="w-full cursor-pointer"
           fill="white"
           viewBox="0 0 103 44"
         >

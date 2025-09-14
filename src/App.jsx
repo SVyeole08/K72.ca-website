@@ -13,6 +13,7 @@ const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
       smooth: true,
+      lerp:0.1,
     });
 
     function raf(time) {
@@ -21,6 +22,8 @@ const App = () => {
     }
 
     requestAnimationFrame(raf);
+
+    
   }, []);
   const lenis = useLenis((lenis) => {
     // called every scroll
