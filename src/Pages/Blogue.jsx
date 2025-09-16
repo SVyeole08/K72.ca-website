@@ -12,7 +12,7 @@ const Blogue = () => {
             <div className="bg-black left-33 top-2 absolute rounded-full w-[13px] h-[13px]"></div>
             <h1 className="text-xl font-[font-2]">Blogue</h1>
           </div>
-          <div className=" absolute font-[font-2] right-0 top-126 text-xl flex pr-2">
+          <div className="absolute font-[font-2] top-126 right-0 text-xl flex pr-2">
             <div>
               <h1>Catégories :&nbsp;</h1>
             </div>
@@ -29,7 +29,7 @@ const Blogue = () => {
             </div>
           </div>
         </div>
-        <div className="w-[97vw] h-[0.5px] -mt-43 bg-black ml-[1.5vw]"></div>
+        <div className="w-[97vw] h-[0.5px] -mt-43 bg-black ml-[1.5vw] line"></div>
       </div>
       <Blgcont />
       <div className="w-screen transition-all-ease  h-[62vh] flex font-[font-2] justify-between bg-black p-2 mt-60 text-[5vw] text-center">

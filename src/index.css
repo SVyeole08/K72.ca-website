@@ -11,6 +11,10 @@
 body {
   overflow-x: hidden;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
 .moveX {
   animation-name: movingAnimation;
   animation-iteration-count: infinite;

@@ -2,24 +2,27 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React from 'react'
 
+gsap.registerPlugin(useGSAP);
+
 const ContactTop = () => {
+  const containerRef = React.useRef(null);
+
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.from(".names", {
       delay: 1.3,
       y: -50,
-      duration:0.4,
-      opacity:0,
-
-      stagger: { amount:0.4 },
+      duration: 0.4,
+      opacity: 0,
+      stagger: { amount: 0.4 },
     });
     tl.to(".names", {
       y: 0,
-      stagger: { amount:0.4 },
+      stagger: { amount: 0.4 },
     });
-  });
+  }, { scope: containerRef });
   return (
-    <div className="w-screen relative pb-10 bg-black flex justify-center h-fit">
+    <div ref={containerRef} className="w-screen relative pb-10 bg-black flex justify-center h-fit">
       <div className="w-full py-3 text-center">
         <div className="font-[font-1] text-[10vw] origin-top overflow-hidden leading-28 uppercase">
           <h1 className="names">Pour</h1>

@@ -1,6 +1,6 @@
 # 🎨 K72.ca Website Clone  
 
-This project is **Front-end clone** of the official [K72.ca](https://k72.ca/) website, built for learning purposes.  
+This project is **Front-end clone** of the official [K72.ca↗](https://k72.ca/) website, built for learning purposes.  
 It replicates the **modern design, animations, and smooth interactions** of the original site using **React** and **GSAP**.  
 
 ⚠️ **Disclaimer:** This project is created **only for educational purposes** and is **not affiliated** with K72 in any way.  

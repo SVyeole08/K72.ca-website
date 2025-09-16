@@ -27,7 +27,7 @@ const Blgcont = () => {
               </h1>
             </a>
             <a href="#">
-              <div className="px-2 mt-2 pt-1 w-fit h-fit bg-[#EDEDED]">
+              <div className="hover:bg-[#D3FD50] transition-all-ease-out transition-duration-1000 px-2 mt-2 pt-1 w-fit h-fit bg-[#EDEDED]">
                 <h1 className="text-xl">Conseil</h1>
               </div>
             </a>
@@ -42,7 +42,7 @@ const Blgcont = () => {
               </h1>
             </a>
             <a href="#">
-              <div className="px-2 mt-2 pt-1 w-fit h-fit bg-[#EDEDED]">
+              <div className="hover:bg-[#D3FD50] transition-all-ease-out transition-duration-1000px-2 mt-2 px-2 pt-1 w-fit h-fit bg-[#EDEDED]">
                 <h1 className="text-xl">Tech&nbsp;&&nbsp;IA</h1>
               </div>
             </a>
