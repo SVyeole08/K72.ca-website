@@ -9,6 +9,7 @@ import Blogue from "./Pages/Blogue";
 import Contact from "./Pages/Contact";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import PageError from "./Pages/PageError";
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
@@ -21,10 +22,8 @@ const App = () => {
     }
 
     requestAnimationFrame(raf);
-
-    
   }, []);
-  
+
   return (
     <div>
       <ReactLenis root />
@@ -47,6 +46,7 @@ const App = () => {
           <Route path="/blogue" element={<Blogue />}>
             Blogue
           </Route>
+          <Route path="*" element={<PageError />}></Route>
         </Routes>
       </div>
     </div>
